@@ -1,11 +1,11 @@
 Class {
-	#name : #BaselineOfRecipts,
+	#name : #BaselineOfRecipes,
 	#superclass : #BaselineOf,
-	#category : #BaselineOfRecipts
+	#category : #BaselineOfRecipes
 }
 
 { #category : #baselines }
-BaselineOfRecipts >> baseline: spec [
+BaselineOfRecipes >> baseline: spec [
 	<baseline>
 	
 	spec
@@ -30,7 +30,7 @@ BaselineOfRecipts >> baseline: spec [
 ]
 
 { #category : #dependencies }
-BaselineOfRecipts >> garage: spec [
+BaselineOfRecipes >> garage: spec [
 	spec
 		baseline: 'Garage'
 		with: [ spec
@@ -39,11 +39,11 @@ BaselineOfRecipts >> garage: spec [
 ]
 
 { #category : #dependencies }
-BaselineOfRecipts >> materialDesignLite: spec [
+BaselineOfRecipes >> materialDesignLite: spec [
 	spec baseline: 'MaterialDesignLite' with: [ spec repository: 'github://DuneSt/MaterialDesignLite:v1.x.x/src' ]
 ]
 
 { #category : #dependencies }
-BaselineOfRecipts >> units: spec [
+BaselineOfRecipes >> units: spec [
 	spec baseline: 'Units' with: [ spec repository: 'github://zweidenker/Units/src' ]
 ]
