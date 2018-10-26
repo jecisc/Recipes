@@ -14,11 +14,12 @@ BaselineOfRecipts >> baseline: spec [
 			"Dependencies"
 			self
 				garage: spec;
-				materialDesignLite: spec.	
+				materialDesignLite: spec;
+				units: spec.	
 			
 			"Packages"
 			spec
-				package: 'Recipes-Model' with: [ spec requires: #('Garage') ];
+				package: 'Recipes-Model' with: [ spec requires: #('Garage' 'Units') ];
 				package: 'Recipes-Web' with: [ spec requires: #('MaterialDesignLite') ].
 			
 			"Groups"
@@ -40,4 +41,9 @@ BaselineOfRecipts >> garage: spec [
 { #category : #dependencies }
 BaselineOfRecipts >> materialDesignLite: spec [
 	spec baseline: 'MaterialDesignLite' with: [ spec repository: 'github://DuneSt/MaterialDesignLite:v1.x.x/src' ]
+]
+
+{ #category : #dependencies }
+BaselineOfRecipts >> units: spec [
+	spec baseline: 'Units' with: [ spec repository: 'github://zweidenker/Units/src' ]
 ]

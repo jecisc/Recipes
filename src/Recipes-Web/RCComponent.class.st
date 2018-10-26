@@ -1,5 +1,5 @@
 Class {
 	#name : #RCComponent,
-	#superclass : #Object,
+	#superclass : #WAComponent,
 	#category : #'Recipes-Web'
 }
