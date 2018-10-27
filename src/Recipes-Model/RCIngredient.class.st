@@ -9,6 +9,11 @@ Class {
 }
 
 { #category : #'instance creation' }
+RCIngredient class >> element: anElement quantity: anInteger [ 
+	^ self element: anElement unit: (anInteger units: (anElement defaultUnit name) asSymbol).
+]
+
+{ #category : #'instance creation' }
 RCIngredient class >> element: anElement unit: aUnit [
 	^ self new
 		element: anElement;
