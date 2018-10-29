@@ -21,12 +21,6 @@ Class {
 	#category : #'Recipes-Web'
 }
 
-{ #category : #initialization }
-RCSession >> initialize [
-	super initialize.
-	self session rootComponent: self
-]
-
 { #category : #accessing }
 RCSession >> rootComponent [
 	^ rootComponent

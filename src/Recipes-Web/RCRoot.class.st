@@ -23,13 +23,13 @@ RCRoot class >> initialize [
 ]
 
 { #category : #accessing }
-RCRoot class >> sessionDuration. [
+RCRoot class >> sessionDuration [
 	"60 minutes"
 	
 	^ 3600
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 RCRoot >> browserFor: aClass [
 	instancesMap at: aClass ifAbsentPut: [ aClass new ]
 ]
@@ -37,6 +37,7 @@ RCRoot >> browserFor: aClass [
 { #category : #initialization }
 RCRoot >> initialize [
 	super initialize.
+	self session rootComponent: self.
 	instancesMap := IdentityDictionary new
 ]
 
