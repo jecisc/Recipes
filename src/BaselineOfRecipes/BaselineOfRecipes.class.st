@@ -20,12 +20,14 @@ BaselineOfRecipes >> baseline: spec [
 			"Packages"
 			spec
 				package: 'Recipes-Model' with: [ spec requires: #('Garage' 'Units') ];
+				package: 'Recipes-Model-Tests' with: [ spec requires: #('Recipes-Model') ];
 				package: 'Recipes-Web' with: [ spec requires: #('MaterialDesignLite') ].
 			
 			"Groups"
 			spec
-				group: 'All' with: #('Model' 'Web');
+				group: 'All' with: #('Model' 'Web' 'Tests');
 				group: 'Model' with: #('Recipes-Model');
+				group: 'Tests' with: #('Recipes-Model-Tests');
 				group: 'Web' with: #('Recipes-Web') ]
 ]
 
