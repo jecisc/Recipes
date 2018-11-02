@@ -5,11 +5,6 @@ Class {
 }
 
 { #category : #helpers }
-RCIngredientTest >> actualClass [
-	^ RCIngredient
-]
-
-{ #category : #helpers }
 RCIngredientTest >> flour [
 	^ RCElement named: 'Flour' defaultUnit: Unit gram
 ]
@@ -26,4 +21,13 @@ RCIngredientTest >> testElementUnit [
 	instance := self actualClass element: self flour unit: 15g.
 	self assert: instance element equals: self flour.
 	self assert: instance unit equals: 15g
+]
+
+{ #category : #tests }
+RCIngredientTest >> testValue [
+	instance
+		element: self flour;
+		value: 15.
+
+	self assert: instance unit equals: (15 units: Unit g)
 ]

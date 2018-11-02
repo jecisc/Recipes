@@ -2,17 +2,24 @@ Class {
 	#name : #RCCategory,
 	#superclass : #RCObject,
 	#instVars : [
-		'name'
+		'label'
 	],
 	#category : #'Recipes-Model'
 }
 
-{ #category : #accessing }
-RCCategory >> name [
-	^ name
+{ #category : #'instance creation' }
+RCCategory class >> labelled: aString [ 
+	^ self new
+		label: aString;
+		yourself
 ]
 
 { #category : #accessing }
-RCCategory >> name: anObject [
-	name := anObject
+RCCategory >> label [
+	^ label
+]
+
+{ #category : #accessing }
+RCCategory >> label: aString [
+	label := aString
 ]

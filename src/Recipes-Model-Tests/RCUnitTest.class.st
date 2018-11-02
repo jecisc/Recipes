@@ -14,7 +14,9 @@ RCUnitTest class >> isAbstract [
 
 { #category : #helpers }
 RCUnitTest >> actualClass [
-	^ self subclassResponsibility
+	^ self class environment
+		at: (self class name withoutSuffix: 'Test') asSymbol
+		ifAbsent: [ self error: 'No class for this TestCase' ]
 ]
 
 { #category : #helpers }

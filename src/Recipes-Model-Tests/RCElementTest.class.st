@@ -4,11 +4,6 @@ Class {
 	#category : #'Recipes-Model-Tests'
 }
 
-{ #category : #helpers }
-RCElementTest >> actualClass [
-	^ RCElement
-]
-
 { #category : #tests }
 RCElementTest >> testNamedUnit [
 	instance := self actualClass named: 'Flour' defaultUnit: Unit gram.

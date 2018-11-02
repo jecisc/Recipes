@@ -9,7 +9,7 @@ Class {
 }
 
 { #category : #'instance creation' }
-RCElement class >> named: aString [
+RCElement class >> labelled: aString [
 	^ self new
 		name: aString;
 		yourself

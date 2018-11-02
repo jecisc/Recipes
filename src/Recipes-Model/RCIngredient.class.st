@@ -9,8 +9,11 @@ Class {
 }
 
 { #category : #'instance creation' }
-RCIngredient class >> element: anElement quantity: anInteger [ 
-	^ self element: anElement unit: (anInteger units: (anElement defaultUnit name) asSymbol).
+RCIngredient class >> element: anElement quantity: aNumber [
+	^ self new 
+		element: anElement; 
+		value: aNumber;
+		yourself
 ]
 
 { #category : #'instance creation' }
@@ -39,4 +42,11 @@ RCIngredient >> unit [
 { #category : #accessing }
 RCIngredient >> unit: aUnit [
 	unit := aUnit
+]
+
+{ #category : #accessing }
+RCIngredient >> value: aNumber [
+	self assert: (self element isNotNil) description: 'RCIngredient>>#value cannot be called without an element.'.
+	
+	self unit: (aNumber units: self element defaultUnit)
 ]
